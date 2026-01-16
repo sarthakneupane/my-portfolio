@@ -110,7 +110,7 @@ const About = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-4">
-                    <InfoItem label="Birthday:" value="1 June" />
+                    <InfoItem label="Birthdate:" value="1 June 2004" />
                     <InfoItem label="Github:" value="https://github.com/sarthakneupane" isLink />
                     <InfoItem label="Phone:" value="+977 9811391785" />
                     <InfoItem label="City:" value="Biratnagar, Nepal" />

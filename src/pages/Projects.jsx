@@ -123,7 +123,7 @@ export default function ProjectsSection() {
       title: "EZ-Bus",
       category: "Full-Stack Web App",
       description:
-        "EZ-Bus is a complete multi vender bus ticket booking system with authentication, payments, and real-time schedule management.",
+        "Multi vender bus ticket booking system with authentication, payments, and real-time schedule management.",
       tags: ["Laravel", "MySQL", "Ajax", "Bootstrap"],
       preview: {
         type: "image",
@@ -136,52 +136,50 @@ export default function ProjectsSection() {
     },
     {
       id: 2,
-      title: "Real-time Chat App",
-      category: "Messaging",
+      title: "NetMate",
+      category: "Personal Finance Tracker",
       description:
-        "Real-time messaging app with rooms, typing indicators, notifications, and message history.",
-      tags: ["React", "Node.js", "Socket.io"],
+        "Personal finance tracker with real-time updates, goal setting, and budget tracking.",
+      tags: ["Laravel", "MySQL", "Tailwind CSS"],
       preview: {
-        type: "code",
-        code: `socket.on('message', (msg) => {
-  addMessage(msg)
-})`,
+        type: "image",
+        src: "/projects/netmate.png",
       },
       links: {
-        github: "https://github.com/yourusername/chat-app",
-        demo: "https://chat-app-demo.com",
+        github: "https://github.com/sarthakneupane/NetMate.git",
+        demo: "https://example.com",
       },
     },
     {
       id: 3,
-      title: "Task Management Dashboard",
-      category: "Productivity",
+      title: "Personal Portfolio",
+      category: "Personal Website",
       description:
-        "Kanban-style dashboard with drag & drop, real-time sync, and analytics.",
-      tags: ["React", "Firebase", "Zustand"],
+        "Personal website with a clean and modern design, showcasing my skills and experiences.",
+      tags: ["React", "Tailwind CSS", "emailjs"],
       preview: {
         type: "image",
-        src: "/projects/kanban-preview.jpg",
+        src: "/projects/portfolio.png",
       },
       links: {
         github: "https://github.com/yourusername/kanban",
-        demo: "https://kanban-app.vercel.app",
+        demo: "neupanesarthak.com.np",
       },
     },
     {
       id: 4,
-      title: "Analytics Dashboard",
-      category: "Data Visualization",
+      title: "Short Movie",
+      category: "Video Production",
       description:
-        "Interactive dashboard with dynamic charts, filters, and role-based access.",
-      tags: ["Next.js", "Chart.js", "Prisma"],
+        "Short movie shot, directed and edited by myself.",
+      tags: ["Davinci Resolve", "Capcut"],
       preview: {
         type: "image",
-        src: "/projects/analytics-preview.jpg",
+        src: "/projects/short-movie.png",
       },
       links: {
         github: "https://github.com/yourusername/analytics",
-        demo: "https://analytics-demo.com",
+        demo: "https://www.youtube.com/watch?v=pUm4MFj8rQ0&t=159s",
       },
     },
   ];
