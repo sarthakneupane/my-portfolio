@@ -120,18 +120,18 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "EZ-Bus",
       category: "Full-Stack Web App",
       description:
-        "Complete e-commerce solution with authentication, payments, and real-time inventory management.",
-      tags: ["Next.js", "PostgreSQL", "Stripe", "Tailwind"],
+        "EZ-Bus is a complete multi vender bus ticket booking system with authentication, payments, and real-time schedule management.",
+      tags: ["Laravel", "MySQL", "Ajax", "Bootstrap"],
       preview: {
         type: "image",
-        src: "/projects/ecommerce-preview.jpg",
+        src: "/projects/ez-bus.png",
       },
       links: {
-        github: "https://github.com/yourusername/ecommerce",
-        demo: "https://ecommerce-demo.vercel.app",
+        github: "https://github.com/sarthakneupane/ez-bus",
+        demo: "https://example.com",
       },
     },
     {

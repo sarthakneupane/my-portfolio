@@ -4,6 +4,14 @@ import ScrollDownIndicator from "../components/ui/ScrollDownIndicator";
 import { Instagram, Linkedin, Dribbble } from "lucide-react";
 
 export default function Home() {
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen w-full bg-gradient-to-b from-neutral-900 via-gray-900 to-neutral-900 flex items-center">
       {/* Main Content */}
@@ -39,7 +47,7 @@ export default function Home() {
           <div className="relative mb-12">
             <div className="absolute -left-4 -top-2 -z-10 w-64 h-16 bg-orange-500 rounded-full opacity-20 blur-3xl"></div>
             <div className="flex items-center space-x-4">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg transition-colors">
+              <Button onClick={() => scrollToSection("contact")} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">
                 Hire Me
               </Button>
               <a
