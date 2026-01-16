@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "../components/ui/Button";
 import ScrollDownIndicator from "../components/ui/ScrollDownIndicator";
-import { Instagram, Linkedin, Dribbble } from "lucide-react";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
+
 
 export default function Home() {
   const scrollToSection = (id) => {
@@ -28,19 +29,24 @@ export default function Home() {
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center space-x-3 sm:space-x-4 mb-6 lg:mb-8">
-            {[Instagram, Linkedin, Dribbble].map((Icon, index) => (
-              <div
+          <div className="relative z-20 flex items-center space-x-3 sm:space-x-4 mb-6 lg:mb-8">
+            {[
+              { Icon: Instagram, link: "https://instagram.com/sar.nep" },
+              { Icon: Linkedin, link: "https://linkedin.com/in/sarthakneupane19" },
+              { Icon: Youtube, link: "https://youtube.com/@sarnep" },
+            ].map(({ Icon, link }, index) => (
+              <button
                 key={index}
-                className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-600 rounded-lg flex items-center justify-center hover:border-orange-500 cursor-pointer transition-colors"
+                onClick={() => window.open(link, "_blank")}
+                className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-600 rounded-lg
+                          flex items-center justify-center hover:border-orange-500
+                          hover:bg-orange-500/10 transition-colors"
               >
-                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
-              </div>
+                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 hover:text-orange-500 transition-colors" />
+              </button>
             ))}
-            <div className="w-8 h-8 sm:w-10 sm:h-10 border border-gray-600 rounded-lg flex items-center justify-center hover:border-orange-500 cursor-pointer transition-colors">
-              <span className="text-gray-400 font-bold text-xs sm:text-sm">Be</span>
-            </div>
           </div>
+
 
           {/* Action Buttons */}
           <div className="relative mb-8 lg:mb-12">
@@ -73,7 +79,7 @@ export default function Home() {
             <div className="bg-gray-800 bg-opacity-20 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-gray-700">
               <div className="flex flex-col sm:flex-row items-center sm:items-start sm:space-x-8 lg:space-x-12 space-y-6 sm:space-y-0">
                 {[
-                  { value: "1+", label: "Experiences" },
+                  { value: "1yr +", label: "Experience" },
                   { value: "5+", label: "Projects Done" },
                   { value: "5+", label: "Happy Clients" },
                 ].map((stat, index) => (

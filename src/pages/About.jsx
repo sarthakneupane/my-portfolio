@@ -116,7 +116,7 @@ const About = () => {
                     <InfoItem label="City:" value="Biratnagar, Nepal" />
                   </div>
                   <div className="space-y-4">
-                    <InfoItem label="Age:" value="21" />
+                    <InfoItem label="Specialization:" value="Full Stack Web Development" />
                     <InfoItem label="Degree:" value="Bachelor's in Information Management" />
                     <InfoItem label="Email:" value="neupanesarthak3000@gmail.com" isLink />
                     <InfoItem label="Freelance:" value="Available" />

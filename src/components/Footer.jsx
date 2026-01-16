@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:neupanesarthak3000@gmail.com"
               aria-label="Email"
               className="p-3 rounded-full bg-gray-800 hover:bg-orange-500 hover:text-black transition-all duration-300"
             >
@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/sarthakneupane"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/sarthakneupane19"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
