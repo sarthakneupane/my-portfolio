@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "../components/ui/Button";
 import { MapPin, Phone, Mail } from "lucide-react"
+import emailjs from "@emailjs/browser";
 
 
 
@@ -27,13 +28,38 @@ export function ContactSection() {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // Form submission logic here
-    console.log("Form submitted:", formData)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", message: "" })
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
+    e.preventDefault();
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        to_email: "neupanesarthak3000@gmail.com", // YOUR EMAIL
+        to_name: "Sarthak",
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        time: new Date().toLocaleString(),
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      setIsSubmitted(true);
+
+      // reset form
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message.");
+    });
+  };
+
+
 
   useEffect(() => {
       const observer = new IntersectionObserver(
@@ -179,6 +205,13 @@ export function ContactSection() {
             </div>
           </form>
         </div>
+
+        {isSubmitted && (
+          <p className="text-green-500 text-sm mt-4">
+            ✅ Message sent successfully! I’ll get back to you soon.
+          </p>
+        )}
+
 
       </div>
     </section>
