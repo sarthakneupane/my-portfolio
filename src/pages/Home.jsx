@@ -12,9 +12,18 @@ export default function Home() {
   };
 
   return (
-    <section id="home" className="min-h-screen w-full bg-gradient-to-b from-neutral-900 via-gray-900 to-neutral-900 flex items-center">
-      {/* Main Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 lg:py-0">
+<section
+  id="home"
+  className="min-h-screen w-full bg-gradient-to-b from-neutral-900 via-gray-900 to-neutral-900 flex items-center"
+>
+  {/* Outer wrapper */}
+  <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 flex justify-center">
+    
+    {/* Inner container */}
+    <div className="w-full max-w-screen-2xl flex flex-col lg:flex-row items-center justify-between">
+    
+        
+      
 
         {/* Left Content */}
         <div className="flex-1 max-w-2xl relative z-10 order-2 lg:order-1 mt-12 lg:mt-0 lg:pr-8">
@@ -116,6 +125,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </div>
 
       {/* Scroll indicator at bottom - hide on mobile if content is long */}
       <div className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2">
