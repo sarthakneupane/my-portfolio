@@ -3,7 +3,6 @@ import { Button } from "../components/ui/Button";
 import ScrollDownIndicator from "../components/ui/ScrollDownIndicator";
 import { Instagram, Linkedin, Youtube } from "lucide-react";
 
-
 export default function Home() {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -15,10 +14,10 @@ export default function Home() {
   return (
     <section id="home" className="min-h-screen w-full bg-gradient-to-b from-neutral-900 via-gray-900 to-neutral-900 flex items-center">
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-12 lg:py-0">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 lg:py-0">
 
         {/* Left Content */}
-        <div className="flex-1 max-w-2xl relative z-10 order-2 lg:order-1 mt-12 lg:mt-0">
+        <div className="flex-1 max-w-2xl relative z-10 order-2 lg:order-1 mt-12 lg:mt-0 lg:pr-8">
           <div className="mb-6 lg:mb-8">
             <p className="text-gray-400 text-base sm:text-lg mb-1 sm:mb-2">Hi I am</p>
             <p className="text-gray-300 text-lg sm:text-xl mb-3 sm:mb-4">Sarthak Neupane</p>
@@ -46,7 +45,6 @@ export default function Home() {
               </button>
             ))}
           </div>
-
 
           {/* Action Buttons */}
           <div className="relative mb-8 lg:mb-12">
@@ -104,7 +102,7 @@ export default function Home() {
         </div>
 
         {/* Right Content - Profile Image */}
-        <div className="flex-1 flex justify-center items-center relative order-1 lg:order-2">
+        <div className="flex-1 flex justify-center lg:justify-end items-center relative order-1 lg:order-2 lg:pl-8">
           <div className="relative mb-8 lg:mb-0">
             {/* Orange ring - hide on very small screens */}
             <div className="absolute inset-0 rounded-full border-2 sm:border-4 border-gray-500 opacity-20 z-20 transform scale-105"></div>
