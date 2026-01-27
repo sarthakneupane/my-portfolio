@@ -21,9 +21,6 @@ export default function Home() {
     
     {/* Inner container */}
     <div className="w-full max-w-screen-2xl flex flex-col lg:flex-row items-center justify-between">
-    
-        
-      
 
         {/* Left Content */}
         <div className="flex-1 max-w-2xl relative z-10 order-2 lg:order-1 mt-12 lg:mt-0 lg:pr-8">
