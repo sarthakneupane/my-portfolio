@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from "react-router-dom";
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,6 +7,9 @@ import ProjectsSection from './pages/Projects';
 import About from './pages/About';
 import { ContactSection } from './pages/Contact';
 import Valentine from './pages/Valentine';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function MainWebsite() {
   const [activeSection, setActiveSection] = useState('home');
@@ -51,14 +53,13 @@ function MainWebsite() {
   );
 }
 
+
 export default function App() {
   return (
     <Routes>
-      {/* Main website */}
       <Route path="/" element={<MainWebsite />} />
-
-      {/* Valentine page (hidden route) */}
       <Route path="/valentine" element={<Valentine />} />
     </Routes>
   );
 }
+
