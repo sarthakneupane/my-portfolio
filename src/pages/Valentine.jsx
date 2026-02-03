@@ -19,7 +19,7 @@ function Valentine() {
       <div className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center">
         <div className="text-5xl mb-4">💝</div>
         <h1 className="text-3xl font-bold text-rose-700 mb-2">
-          Create Your Valentine Link
+          Create Your Valentine Link!
         </h1>
         <p className="text-rose-500 mb-6">
           Write your love story in just two names 💌
