@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ScrollProgress from './components/ScrollProgress';
 import Home from './pages/Home';
 import ProjectsSection from './pages/Projects';
-import Travels from './pages/Travels';
-import Blogs from './pages/Blogs';
 import About from './pages/About';
 import { ContactSection } from './pages/Contact';
+import Valentine from './pages/Valentine';
 
-// import { Contact } from 'lucide-react';
-
-function App() {
+function MainWebsite() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
@@ -39,23 +37,28 @@ function App() {
 
   return (
     <div className="font-sans text-gray-800 bg-gradient-to-br from-gray-100 to-gray-200">
-      {/* <ScrollProgress /> */}
       <Header activeSection={activeSection} />
-      
+
       <main>
         <Home />
         <About />
-        {/* <Services /> */}
         <ProjectsSection />
-        {/* <Travels />
-        <Blogs /> */}
         <ContactSection />
-        
       </main>
-      
+
       <Footer />
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Routes>
+      {/* Main website */}
+      <Route path="/" element={<MainWebsite />} />
+
+      {/* Valentine page (hidden route) */}
+      <Route path="/valentine" element={<Valentine />} />
+    </Routes>
+  );
+}
